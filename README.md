@@ -1,7 +1,7 @@
 <html>
-<h1>SDK для <href='https://my.digiseller.com'>Digiseller</href></h1>
-<p>Данная библиотека написана для удобного и быстрого взаимодействия с API сервиса digiseller.<br>
-Чтобы использовать эту библиотеку, необходимо получить API ключ и ID продавца.</p>
+<h1>SDK для <a href='https://my.digiseller.com'>Digiseller</a></h1>
+<p>Данная библиотека написана для удобного и быстрого взаимодействия с API сервиса <a href='https://my.digiseller.com'>Digiseller</a>.<br>
+Чтобы использовать эту библиотеку, необходимо получить <a href='https://my.digiseller.com/inside/api_keys.asp'>API ключ</a> и ID продавца.</p>
 
 <h2>Начало работы (создание Client):</h2>
 <ol>
@@ -18,7 +18,7 @@
 	</li>
 	<li>
 		Создайте объект клиента, передав в него API ключ и ID продавца<br>
-		<code>client = Client(API_KEY, SELLER_ID)<code>
+		<code>client = Client(API_KEY, SELLER_ID)</code>
 	</li>
 </ol>
 
@@ -40,38 +40,39 @@ message - Текст сообщения</i>
 
 <h2>Создание Invoice</h2>
 
-<code>from digiseller import Invoice<br><br>
-
+<code>from digiseller import Invoice
 invoice = Invoice(client, invoice_id)</code><br>
 <i>client - объект класса Client<br>
 invoice_id - номер заказа</i><br>
 
 <h3>Параметры объекта:</h3>
-client - объект класса Client
-invoice_id - ID(номер) заказа
-json - json ответ на запрос
-good_id - ID товара
-amount - Сумма зачисленная на счет
-purchase_date - Дата и время платежа
-count_goods - Количество единиц товара
-unique_code - Статус уникального кода
+client - объект класса Client<br>
+invoice_id - ID(номер) заказа<br>
+json - json ответ на запрос<br>
+good_id - ID товара<br>
+amount - Сумма зачисленная на счет<br>
+purchase_date - Дата и время платежа<br>
+count_goods - Количество единиц товара<br>
+unique_code - Статус уникального кода<br>
 
-<h3>Функции объекта класса Invoice:<h3>
+<h3>Функции объекта класса Invoice:</h3>
 <oi>
 	<li>
-		Получение всех сообщений из диалога заказа
+		Получение всех сообщений из диалога заказа<br>
+		<code>invoice.get_all_messages()</code>
 	</li>
 	<li>
-		Отправка сообщения (дублирует функцию из Client)
-		<code>invoice.send_message(message)<code><br>
+		Отправка сообщения (дублирует функцию из Client)<br>
+		<code>invoice.send_message(message)</code><br>
 		<i>message - Текст сообщения</i> 
 	</li>
 	<li>
-		Удаление сообщения из диалога
-		<code>invoice.delete_message(message_id)<code><br>
+		Удаление сообщения из диалога<br>
+		<code>invoice.delete_message(message_id)</code><br>
 		<i>message_id - ID сообщения</i> 
 	</li>
 	<li>
-		Установить флаг "прочитано"
-		<code>invoice.set_read()<code> 
+		Установить флаг "прочитано"<br>
+		<code>invoice.set_read()</code> 
 	</li>
+</oi>
